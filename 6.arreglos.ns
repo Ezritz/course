@@ -1,0 +1,31 @@
+Proceso sin_titulo
+	Definir I Como Entero;
+	Definir CRECIENTE,DECRECIENTE Como Logico;
+	Definir NUM Como Real;
+	Dimension NUM[5];
+	Para I<-0 Hasta 4 Hacer
+		Escribir (I+1),'. DIGITE UN NUMERO:';
+		Leer NUM[I];
+	FinPara
+	CRECIENTE <- FALSO;
+	DECRECIENTE <- FALSO;
+	Para I<-0 Hasta 3 Hacer
+		Si NUM[I]<NUM[I+1] Entonces
+			CRECIENTE <- VERDADERO;
+		FinSi
+		// DECRECIENTE
+		Si NUM[I]>NUM[I+1] Entonces
+			DECRECIENTE <- VERDADERO;
+		FinSi
+	FinPara
+	Si CRECIENTE=VERDADERO Y DECRECIENTE=FALSO Entonces
+		Escribir 'FORMA CRECIENTE';
+	SiNo
+		// FORMA DECRECIENTE
+		Si CRECIENTE=FALSO Y DECRECIENTE=VERDADERO Entonces
+			Escribir 'FORMA DECRECIENTE';
+		SiNo
+			Escribir 'FORMA DESORDENADA';
+		FinSi
+	FinSi
+FinProceso

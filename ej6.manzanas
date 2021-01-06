@@ -1,0 +1,41 @@
+//una fruteria ofrece las manzanas con descuento segun la siguiente tabla
+//0-2kg 0% descuento
+//2.01-5kg 10% descuento
+//5.01-10kg 15% descuento
+//Determinar cuanto pagara una persona que compre manzanas en esa fruteria 
+
+Proceso sin_titulo
+	
+	definir precio, peso_total, precio_total como reales;
+	definir peso1, peso2, peso3 como reales;
+	
+
+	escribir "Digite el precio de manzanas";
+	leer precio;
+	
+	escribir "digite peso de manzanas";
+	leer peso_total;
+	
+	
+	
+	peso1 <- 2;
+	peso2<- 5;
+	peso3 <- 10;
+	
+
+	si peso_total <= peso1 entonces 
+		escribir "No aplica descuento el total a pagar es ", "$", precio*peso_total;
+	SiNo
+		si peso_total > peso1 y peso_total <= peso2 entonces;
+			escribir "Descuento del 10% el total a pagar es:", "$",precio*peso_total*0.90;
+		SiNo
+			si peso_total> peso2 y peso_total<=peso3 entonces
+				escribir "descuento del 15% el total a pagar es: ", "$",precio*peso_total*0.85;
+			sino
+			 si peso_total> peso3 Entonces
+				escribir "Descuento del 20% el total a pagar es :", "$",precio*peso_total*0.80;
+			FinSi
+		FinSi
+		FinSi
+	FinSi
+FinProceso

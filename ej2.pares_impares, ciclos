@@ -1,0 +1,31 @@
+//ciclo para-hasta-Hacer
+//se desea calcular independientemente la suma de los numeros pares e impares
+//comprendidos entre 1 y 50
+//suma_pares=2+4+6+...+48
+//suma_impares= 3+5+7+...+49
+
+Proceso ejercicio1
+	definir pares, impares, num como reales;
+	definir suma_pares, suma_impares como reales;
+	
+	escribir "Suma de numeros impares e impares";
+	
+	suma_pares <- 0;
+	suma_impares <- 0;
+	
+	si suma_pares  mod 2 = 0 Entonces
+		para pares <- 2 hasta 48 con paso 2 hacer
+			suma_pares <- suma_pares + pares;
+		FinPara
+		escribir "la suma de pares es " , suma_pares;
+		si suma_impares mod 2 =0 entonces
+			para impares <- 3 hasta 49 con paso 2 Hacer
+				suma_impares<- suma_impares+ impares;
+			FinPara
+			escribir "la suma de impares es ", suma_impares;
+		FinSi
+		
+		
+	FinSi
+	
+FinProceso

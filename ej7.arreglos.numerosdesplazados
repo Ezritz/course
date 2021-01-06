@@ -1,0 +1,39 @@
+//Crear un programa que lea por teclado un arreglo de 6 numeros
+//Y la desplace una celda hacia abajo: el primero pasa a ser el segundo,
+//El segundo pasa a ser el tercero y asi sucesivamente.
+//El ultimo pasa a ser el primero. 0-1-2-3-4-5      5-0-1-2-3-4
+
+Proceso ejercicio7
+	definir num, i, ultimo como enteros;
+	dimension num[6];
+	
+	
+	
+	para i <- 0 hasta 5 con paso 1 Hacer
+		escribir (i+1), ". Digite un numero";
+		leer num[i];
+	FinPara
+
+	//guardamos el ultimo elemento del arreglo
+	ultimo <- num[5];
+	
+	//Ya se puede desplazar el arreglo una posicion
+	//1-2-3-4-5-6     6-1-2-3-4-5
+	para i<- 4 hasta 0 con paso -1 Hacer
+		num[i+1] <- num[i];
+	FinPara
+
+	//almacenamos el ultimo elemento en la primera posicion 
+	num[0] <- ultimo;
+	
+	escribir " El nuevo arreglo es ";
+	
+	para i <- 0 hasta 5 con paso 1 Hacer
+		Escribir num[i];
+	FinPara
+
+
+
+
+	
+FinProceso

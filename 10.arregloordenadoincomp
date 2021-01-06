@@ -1,0 +1,72 @@
+
+	//leer 2 arreglos de 5 numeros enteros cada uno,
+	//Que estaran ordenados crecientemente. Copiar (fusionar) los dos arreglos 
+	//en un tercero, de forma que los numeros sigan ordenados.
+	
+	Proceso ejercicio10
+		definir  i, j,k,  arreglo1, arreglo2, arreglo3 como entero;
+		definir creciente como logico;
+		dimension arreglo1[5];
+		dimension arreglo2[5];
+		dimension arreglo3[10];
+		
+		
+		repetir 
+			creciente <- verdadero;
+			escribir "Arreglo 1";
+			para i <- 0 hasta 4 con paso 1 Hacer
+				escribir (i+1), ". Digite los numeros";
+				leer arreglo1[i];
+			FinPara
+			Para i<-0 Hasta 3 con paso 1 Hacer
+				Si arreglo1[i]>arreglo1[i+1] Entonces
+					creciente <- falso;
+				FinSi
+			FinPara
+			
+			Si creciente=falso Entonces
+				Escribir ' El arreglo no esta ordenado, digite nuevamente';
+			FinSi
+		Hasta Que creciente = Verdadero
+		
+		repetir 
+			creciente <- verdadero;
+			escribir "Arreglo 2";
+			para i <- 0 hasta 4 con paso 1 Hacer
+				escribir (i+1), ". Digite los numeros";
+				leer arreglo2[i];
+			FinPara
+			Para i<-0 Hasta 3 con paso 1 Hacer
+				Si arreglo2[i]>arreglo2[i+1] Entonces
+					creciente <- falso;
+				FinSi
+			FinPara
+			
+			Si creciente=falso Entonces
+				Escribir ' El arreglo no esta ordenado, digite nuevamente';
+			FinSi
+		Hasta Que creciente = Verdadero
+		
+		para i <- 0 hasta 4 hacer 
+			arreglo3[i] <- arreglo1[i]; 
+		FinPara
+		para i <- 5 hasta 9 Hacer
+			
+			arreglo3[i] <- arreglo2[j];
+			j <- j+1;
+		FinPara
+		para i <- 0 hasta 9 hacer 
+			creciente <- verdadero;
+			si arreglo3[i] > arreglo2[j] Entonces
+				creciente <- falso;
+				si arreglo2[j] > arreglo1[i] Entonces
+					creciente <- falso;
+				SiNo
+					escribir "";
+					escribir " El nuevo arreglo es ", arreglo3[i];
+				FinSi
+				
+			FinSi
+			
+		FinPara
+FinProceso

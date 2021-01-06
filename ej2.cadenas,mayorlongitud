@@ -1,0 +1,26 @@
+//calcular la longitud de 2 cadenas de caracteres, y mostrar la cadena
+//con la mayor longitud
+
+Proceso ejercicio2
+	
+	definir frase, frase2 como cadenas;
+	definir tamano, tamano2, i Como Entero;
+	
+	i <- 1;
+		escribir sin saltar(i), ". Digite una cadena ";
+		leer frase;
+		
+		escribir Sin Saltar(i+1), ". Digite una cadena ";
+		leer frase2;
+	
+	tamano <- longitud(frase);
+	tamano2 <- longitud(frase2);
+	
+	si tamano > tamano2 Entonces
+		escribir "";
+		escribir "La cadena de mayor longitud es :" , frase,  "con :", tamano,  " Caracteres";
+	SiNo
+		escribir "";
+		escribir "La cadena de mayor longitud es :", frase2, "con", tamano2, "Caracteres";
+	FinSi
+FinProceso

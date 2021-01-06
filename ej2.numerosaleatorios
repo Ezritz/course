@@ -1,0 +1,21 @@
+//crear arreglo unidimensional donde el usuario indique el tamano por teclado
+//Despues llenar el arreglo con numeros aleatorios entre 1-100
+//Por ultimo mostrar los elementos del arreglo.
+
+Proceso ej2numeros_aleatorios
+	Definir  i, num, dim como entero;
+	Dimension num[100];
+	
+	
+	
+	escribir "Digite el numero de arreglo  ";
+	leer dim;
+	
+	
+	para i <- 0 hasta dim -1 con paso 1 Hacer
+		num[i] <- azar(100)+1;
+		escribir num[i];
+	FinPara
+	
+	
+FinProceso

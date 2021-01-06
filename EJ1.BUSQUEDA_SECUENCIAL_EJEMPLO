@@ -1,0 +1,42 @@
+//BUSQUEDA SECUENCIAL
+//BUSCAR UN NUMERO EN EL ARREGLO QUE BRINDE EL USUARIO en un arreglo de 5
+Proceso BUSQUEDA_SECUENCIAL
+	Definir i, dato, posicion como enteros;
+	definir encontrado como logico;
+	definir num como entero;
+	dimension num[5];
+	
+	escribir "Digite los elementos del arreglo:";
+	para i<-0 hasta 4 con paso 1 Hacer
+		escribir i, ". Digite un numero:";
+		leer num[i];
+		
+	FinPara
+	
+	//para saber el dato a buscar
+	escribir "";
+	escribir "Digite un elemento a buscar:";
+	leer dato;
+	
+	//Algoritmo para la busqueda
+	//se inicia con la varibale logica en falso ya que no se tiene la certeza
+	encontrado <- falso;
+	i <- 0; //para poder ir buscando aumentando el iterador
+	
+	mientras (i <5 y encontrado = falso) Hacer
+		si (num[i] = dato) Entonces
+			encontrado <- verdadero;
+			posicion <- i; //buscar y definir la posicion es opcional
+			
+		FinSi
+		i <- i+1; // para poder llegar hasta 5 y repita el proceso hasta encontrar dato
+	FinMientras
+	
+	//fuera de algoritmo crear condicional para comprobar 
+	
+	si encontrado = verdadero entonces
+		escribir "El elemento", dato, " si existe en el arreglo, posicion: ", posicion;
+	SiNo
+		escribir " El elemento no existe:";
+	FinSi
+FinProceso

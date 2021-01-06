@@ -1,0 +1,18 @@
+Proceso sin_titulo
+	definir area, circunferencia, radio Como enteros;
+	definir area_radio, circunferencia_radio como enteros;
+	
+	
+	
+	escribir "digite el valor de radio:";
+	leer radio;
+	
+	
+	resultado <- ;
+	escribir "el area del circulo es:", resultado;
+	
+	area <- (PI)* radio^2;
+	radio <- circunferencia/2;
+	circunferencia <- 2* PI * radio;
+	
+FinProceso

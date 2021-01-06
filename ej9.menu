@@ -1,0 +1,27 @@
+//Hacer un programa que tenga un menu con las siguientes opciones:
+//opcion1: elevar un numero a una potencia x
+//opcion 2: sacar la raiz cuadrada de un numero
+//opcion 3: salir
+
+Proceso sin_titulo
+	definir num como real;
+	definir potencia, raiz_cuadrada, opcion como reales;
+	definir resultado como real;
+	
+	escribir "Digite proceso a realizar (1= potencia, 2= raiz cuadrada, 3 Salir)";
+	leer opcion;
+	escribir "digite un numero";
+	leer num;
+	
+	segun opcion hacer
+		1: escribir "Digite potencia deseada";
+			leer potencia ;
+			escribir "el resultado es ", num ^ potencia;
+			leer resultado;
+		2: escribir "la raiz cuadrada es ", rc(num);
+		3: escribir "Salir";
+		De Otro Modo:
+			escribir "Error, no hay valor para esta opcion";
+	FinSegun
+	
+FinProceso

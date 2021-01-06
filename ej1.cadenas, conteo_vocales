@@ -1,0 +1,34 @@
+//conteo de vocales
+//disene un programa que permita ingresar una cadena de caracteres,
+//y detecte cuantas vocales tiene.
+
+
+Proceso ejercicio1
+	
+	definir frase como cadena;
+	definir vocales como cadena;
+	definir contadorvocales,i,j como entero;
+	
+	escribir sin saltar "Digite la frase deseada";
+	leer frase;
+	
+	//transformar la frase a minusculas
+	frase <-minusculas (frase);
+	vocales <-"aeiou";
+	contadorvocales <-0;
+	
+	//definir iteradores i, j
+	//frase<- "..."
+	
+	para i <-0 hasta (longitud(frase)-1) con paso 1 Hacer
+		//recorremos las vocales
+		para j <- 0 hasta (longitud(vocales)-1) con paso 1 Hacer
+			si (subcadena(frase,i,i)=subcadena(vocales,j,j))Entonces
+				contadorvocales <- contadorvocales+1;
+			FinSi
+		FinPara
+	FinPara
+	
+	escribir"";
+	escribir "El numero de vocales de la cadena es :", contadorvocales;
+FinProceso

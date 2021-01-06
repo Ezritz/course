@@ -1,0 +1,28 @@
+//disene un algoritmo que elimine los espacios en blanco de un texto
+//ejemplo "Hola que tal" el resultado debera ser "Holaquetal"
+
+
+
+Proceso ejercicio4
+	
+	
+	definir frase, frase2 como cadenas;
+	definir i como entero;
+	definir letra como caracter;
+	
+	escribir Sin Saltar "Digite una cadena";
+	leer frase;
+	frase2 <- "";
+	
+	para i <- 0 hasta longitud(frase) Hacer
+		letra <- subcadena(frase, i, i);
+		escribir letra;
+		si letra <> ' ' Entonces
+			frase2 <- concatenar(frase2, letra);
+		FinSi
+	  
+	FinPara
+	
+	escribir frase2;
+	
+FinProceso

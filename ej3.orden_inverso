@@ -1,0 +1,28 @@
+//crea un arreglo unidimensional con "N" caracteres,
+//Lee los elementos por teclado, guardalos en el arreglo y muestralos 
+//en el orden inverso introducido
+
+Proceso ej3_Orden_inverso
+	definir palabras Como Caracter;;
+	definir i, num como entero;
+	dimension palabras[100];
+	
+	
+	
+	Repetir
+		escribir " digite el valor del arreglo ";
+		leer num;
+	Hasta Que num >0;
+	
+	para i <- 0 hasta num -1 con paso 1 hacer 
+		escribir (i+1), ". Digite el caracter ";
+		leer palabras[i];
+		
+	FinPara
+	
+	
+	para i <- num-1 hasta 0 con paso -1 Hacer
+		escribir palabras[i];
+	FinPara
+	
+FinProceso

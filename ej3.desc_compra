@@ -1,0 +1,25 @@
+//En un almacen  se hace un 20% de descuento a los clientes cuya compra supere los $100. 
+//cual sera la cantidad que pagara una persona por su compra? 
+
+Proceso sin_titulo
+	definir descuento, precio, num como entero;
+	definir porcentaje, totalpago como entero;
+	
+	escribir "digite el precio de su compra";
+	leer precio;
+	
+	SI precio > 100 Entonces;
+		descuento <- precio*0.20;
+		totalpago <- precio-descuento;
+		escribir "Aplica descuento promocion ";
+		escribir "Total a pagar con descuento aplicado: ", "$", totalpago;
+	
+		
+	SiNo
+		escribir "su compra no aplica promocion";
+		escribir "Total a pagar: ", "$", precio;
+	FinSi
+	
+	
+	
+FinProceso

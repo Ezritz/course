@@ -1,0 +1,29 @@
+//Leer tres numeros diferentes e imprimir el numero mayor de los tres.
+
+Proceso sin_titulo
+	definir num1, num2, num3 como reales;
+	
+	escribir "digite tres numeros diferentes";
+	leer num1, num2, num3;
+	
+	si num1>num2 entonces
+		si num1>num3 entonces
+			escribir "el numero mayor es : ", num1;
+		sino
+			
+			si num2>num1 entonces 
+				si num2>num3 Entonces
+					escribir "el numero mayor es ", num2;
+				SiNo
+					si num3>num1 entonces
+						si num3>num2 Entonces
+							escribir "el numero mayor es ", num3;
+						FinSi
+					FinSi
+					
+				FinSi
+			FinSi
+			
+		FinSi
+	FinSi
+FinProceso

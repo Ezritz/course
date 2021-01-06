@@ -1,0 +1,39 @@
+//Leer 2 numeros; si son iguales, que los multiplique,
+//si el primero es mayor que el segundo, que los reste
+//Y si no, que los sume
+
+
+Proceso sin_titulo
+	
+	definir num1, num2, resultado como reales;
+	definir op1,op2, op3 como reales;
+	
+	escribir "Escriba el digito 1";
+	leer num1;
+	escribir "Escriba el digito 2";
+	leer num2;
+	
+	op1<- num1*num2;
+	op2<- num1-num2;
+	op3<- num1+num2;
+	
+	si num1=num2  Entonces
+		resultado <- op1;
+		escribir "se multiplican ", op1;
+		
+	sino 
+		si num1>num2 entonces
+			resultado<- op2;
+			escribir "se resta ", op2;
+			
+		sino 
+			si num1<=num2 entonces
+				escribir "se suman ", op3;
+			FinSi
+			
+		FinSi
+	FinSi
+	
+
+	
+FinProceso

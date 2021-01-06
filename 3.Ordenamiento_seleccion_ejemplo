@@ -1,0 +1,35 @@
+//ordenamiento por seleccion
+
+Proceso ordenamiento_por_seleccion
+	definir num como entero;
+	dimension num[5];
+	definir i, j, min como entero;
+	
+	
+	escribir "Digite los elementos del arreglo :";
+	
+para i <- 0 hasta 4 con paso 1 Hacer
+	 escribir (i+1), " . Digite un numero : ";
+	 leer num[i];
+ FinPara
+
+ //Algoritmo del ordenamiento por seleccion
+ para i <- 0 hasta 3 con paso 1 Hacer
+	 min <- i;
+	 para j <- (i+1) hasta 4 con paso 1 Hacer
+		 si num[j] < num[min] Entonces
+			 min <- j;
+		 FinSi
+	 FinPara
+	 aux <- num[i];
+	 num[i] <- num[min];
+	 num[min] <- aux;
+ FinPara
+ 
+ escribir "";
+ escribir "Arreglo ordenado:";
+ para i <- 0 hasta 4 con paso 1 Hacer
+	 escribir num[i];
+ FinPara
+//para imprimir de manera descendente ciclo para linea 31 cambiar de i <-4 hasta 0 con paso -1
+FinProceso

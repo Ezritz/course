@@ -1,0 +1,50 @@
+// Leer 5 elementos numericos que se introduciran ordenados de forma creciente.
+// Estos los guardaremos en un arreglo de tamano 6.
+// Leer un numero N, e insertarlo en el lugar adecuado para que el arreglo 
+// continue ordenado.
+Proceso ejercicio8
+	Definir NUM,I,N,POSICION,J  Como Entero;
+	Dimension NUM[6];
+	Definir creciente Como Logico;
+	Repetir
+		creciente <- Verdadero;
+		Para I<-0 Hasta 4 Hacer
+			// digitar los primeros 5 elementos
+			Escribir (I+1),'. Digite un numero de manera creciente';
+			Leer NUM[I];
+		FinPara
+		
+		Para I<-0 Hasta 3 Hacer
+			Si NUM[I]>NUM[I+1] Entonces
+				creciente <- falso;
+			FinSi
+		FinPara
+		
+		Si creciente=falso Entonces
+			Escribir ' El arreglo no esta ordenado, digite nuevamente';
+		FinSi
+		
+	Hasta Que creciente=Verdadero
+	
+	
+	Escribir 'DIGITE UN VALOR A AGREGAR';
+	Leer N;
+	POSICION <- 0;
+	J <- 0;
+	// RECORRER EL ARREGLO PARA SABER SU POSICION
+	Mientras NUM[J]< n Y J<5 Hacer
+		POSICION <- POSICION+1;
+		J <- J+1;
+	FinMientras
+	// DESPLAZAMOS UNA POSICION PARA HACER ESPACIO PARA DATO
+	// 1-2-3-  5-6
+	Para I<-4 Hasta POSICION Con Paso -1 Hacer
+		NUM[I+1]<-NUM[I];
+	FinPara
+	NUM[POSICION] <- n;
+	Escribir '';
+	Escribir 'EL NUEVO ARREGLO ES';
+	Para I<-0 Hasta 5 con paso 1 Hacer
+		Escribir NUM[I];
+	FinPara
+FinProceso

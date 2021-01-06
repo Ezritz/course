@@ -1,0 +1,9 @@
+Proceso PROGRAMA1
+	// ESTE SERA NUESTRO PRIMER PROGRAMA
+	DEFINIR A,B,RESULTADO COMO ENTEROS;
+	A <-10;
+	Escribir "digite un numero: ";
+	Leer B;
+	RESULTADO <- A + B;
+	Escribir "el resultado es: ",resultado;
+FinProceso

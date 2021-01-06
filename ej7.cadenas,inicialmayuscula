@@ -1,0 +1,33 @@
+//Ingresar una frase y modificarla convirtiendo el primer caracter de cada palabra si esta fuera una letra, 
+//de minusculas a minusculas
+
+Proceso ejercicio7
+	
+	
+	definir frase, frase2 como cadenas;
+	definir letra Como Caracter;
+	definir i,var como entero;
+	
+	
+	escribir Sin Saltar "Digite una cadena ";
+	leer frase;
+	
+	var<-1;
+	para i <- 0 hasta longitud(frase) con paso 1 Hacer
+		letra <- subcadena(frase, i,i);
+		si var = 1 Entonces
+			escribir sin saltar Mayusculas(letra);
+			var<-0;
+		SiNo
+			si letra = ' ' Entonces//debe ser diferente para tomar la primera letra
+				var<- 1;
+				
+				
+				
+			FinSi
+			escribir sin saltar letra;
+		FinSi
+		
+	FinPara
+	escribir "";
+FinProceso

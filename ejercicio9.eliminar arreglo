@@ -1,0 +1,29 @@
+// Leer por teclado un arreglo de 5 elementos numericos
+// Y una posicion (entre 0 y 4). 
+// Eliminar el elemento situado en la posicion dada sin dejar huecos.
+Proceso EJERCICIO9
+	Definir elemento Como entero;
+	Definir i,posicion, num Como Entero;
+	Dimension num[5];
+	Definir n Como Logico;
+	
+	para i <- 0 hasta 4 con paso 1 Hacer
+		escribir i, ". Digite un numero";
+		leer num[i];
+	FinPara
+	posicion <- 0;
+	Repetir
+		Escribir ' Digite la posicion a eliminar';
+		Leer posicion;
+		
+	Hasta Que posicion >= 0 y posicion <= 4
+	
+	Para i<- posicion  Hasta 3 con paso 1  Hacer
+		num[i] <- num[i+1];
+	FinPara
+	escribir "";
+	Escribir 'El nuevo arreglo es ';
+	para i <- 0 hasta 3 con paso 1 Hacer
+		escribir i, ". elemento: ", num[i];
+	FinPara
+FinProceso

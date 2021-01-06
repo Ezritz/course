@@ -1,0 +1,21 @@
+Proceso programa1
+	
+	definir a,b,c, resultado como reales;
+	a<-10;
+	b<-20;
+	escribir "digite un numero: ";
+	definir num como entero;
+	leer num;
+	c<- num;
+
+	
+	resultado <-a+b+c;
+	
+	escribir "el resultado es:", resultado;
+	
+	
+	
+	
+	
+	
+FinProceso

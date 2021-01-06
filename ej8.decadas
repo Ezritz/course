@@ -1,0 +1,20 @@
+//Elaborar un programa que me muestre el significado de aniversario de cada decada hasta los 60.
+
+Proceso sin_titulo
+	definir num como entero;
+	
+	escribir "Digite el numero de aniversario en decadas (10-60)";
+	leer num;
+	
+	segun num hacer
+		10: escribir "Bodas de Hojalata";
+		20: escribir "Bodas de Porcelana";
+		30: escribir "Bodas de Perlas";
+		40: escribir "Bodas de Rubi";
+		50: escribir "Bodas de Oro";
+		60: escribir "Bodas de Diamante";
+		De Otro Modo:
+			escribir " error, no existe significado para ese numero";
+	FinSegun
+	
+FinProceso

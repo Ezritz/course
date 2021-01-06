@@ -1,0 +1,50 @@
+//nusqueda binaria
+//arreglo de 5 buscaremos 1 elemento del arreglo brindado por el usuario
+
+Proceso busqueda_binaria
+	
+	definir i, dato, inf, sup como entero;
+	definir num, mitad, posicion como enteros;
+	dimension num[5];
+	definir encontrado Como Logico;
+	
+	escribir "Escriba los elementos del arreglo: ";
+	para i <- 0 hasta 4 con paso 1 Hacer
+		escribir i, ". Digite un numero :";
+		leer num[i];
+		//para que no tengamos salto de linea, se puede pedir escribir sin saltar
+	FinPara
+	
+	escribir "";
+	escribir sin saltar "digite un elemento a buscar: ";
+	leer dato;
+	
+	//algoritmo de la busqueda binaria
+	encontrado <- falso;
+	inf <- 0;
+	sup <- 5;
+	i <- 0;
+	mitad <- trunc((inf+sup)/2); //funcion trunc para guardar como entero 
+	mientras (inf<=sup y i<5 y encontrado = falso) hacer
+		si (num[mitad]=dato) Entonces
+			encontrado <- verdadero;
+			posicion <- mitad;
+		SiNo
+			si (num[mitad]>dato) Entonces
+				sup <- mitad;
+				mitad <- trunc((inf+sup)/2);
+			SiNo
+				inf <- mitad;
+				mitad <-trunc ((inf+sup)/2);
+			FinSi
+		FinSi
+		i <- i+1;
+	FinMientras
+	
+	si (encontrado=verdadero) Entonces
+		escribir "El elemento ha sido encontrado en la posicion: ", posicion;
+	SiNo
+		escribir "El Elemento no ha sido encontrado:";
+	FinSi
+	
+FinProceso
