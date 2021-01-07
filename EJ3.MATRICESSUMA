@@ -1,0 +1,39 @@
+//hacer un algoritmo que llene una matriz de 4*4.
+//Calcular la suma de cada fila y almacenarla en un arreglo, la suma de cada columna 
+//Y almacenarla en otro arreglo.
+
+Proceso ejercicio3
+	definir num, sumafila, sumacolumna, suma como entero;
+	dimension num[4,4];
+	dimension sumafila[4];
+	dimension sumacolumna[4];
+	definir i,j como entero;
+	
+	para i <- 0 hasta 3 con paso 1 hacer 
+		para j <- 0 hasta 3 con paso 1 Hacer
+			escribir "Digite un numero [",i,"][",j,"] ";
+			leer num[i,j];
+		FinPara
+	FinPara
+	
+	escribir "";
+	//suma filas
+	para i<- 0 hasta 3 con paso 1 hacer 
+		sumafila[i]<-0;
+		para j <- 0 hasta 3 con paso 1 Hacer
+			sumafila[i] <- sumafila[i]+num[i,j];
+		FinPara
+		escribir "la suma de las filas es : ",sumafila[i];
+	FinPara
+	
+	escribir "";
+	//suma columnas
+	para j <-0 hasta 3 con paso 1 Hacer
+		sumacolumna[j]<-0;
+		para i <- 0 hasta 3 con paso 1 Hacer
+			sumacolumna[j] <- sumacolumna[j] + num[i,j];
+		FinPara
+		escribir "La suma de las columnas es : ", sumacolumna[j];
+	FinPara
+	
+FinProceso

@@ -19,15 +19,11 @@ Proceso ejercicio7
 			escribir sin saltar Mayusculas(letra);
 			var<-0;
 		SiNo
-			si letra = ' ' Entonces//debe ser diferente para tomar la primera letra
-				var<- 1;
-				
-				
-				
-			FinSi
 			escribir sin saltar letra;
 		FinSi
-		
+		si letra = ' ' Entonces//debe ser diferente para tomar la primera letra
+			var<- 1;
+		FinSi
 	FinPara
 	escribir "";
 FinProceso

@@ -26,34 +26,22 @@ Proceso ejercicio9
 		letras <- subcadena(frase, i, i);
 		si letras='a' Entonces
 			vocala<- vocala+1;
-		SiNo
-			si letras='e' Entonces
-				vocale<-vocale+1;
-			SiNo
-				si letras='i' Entonces
-					vocali<-vocali+1;
-				SiNo
-					si letras = 'o' Entonces
-						vocalo<- vocalo+1;
-					SiNo
-						si letras ='u' Entonces
-							vocalu <- vocalu+1;
-						FinSi
-					FinSi
-				FinSi
-			FinSi
 		FinSi
-		PARA j<- 0 hasta (longitud(vocales)-1) con paso 1 Hacer
-			si (subcadena(frase,i,i))= (subcadena(vocales, j,j)) entonces
-				
-				contadorvocal<- contadorvocal+1;
-				
-			FinSi
-		FinPara
-		
-		
-		
+		si letras='e' Entonces
+			vocale<-vocale+1;
+		FinSi
+		si letras='i' Entonces
+			vocali<-vocali+1;
+		FinSi
+		si letras = 'o' Entonces
+			vocalo<- vocalo+1;
+		FinSi
+		si letras ='u' Entonces
+			vocalu <- vocalu+1;
+		FinSi
 	FinPara
+	
+	contadorvocal<- vocala+vocale+vocali+vocalo+vocalu;
 	
 	escribir "el total de vocales en la cadena es de : ", contadorvocal;
 	escribir  "Total vocal A : ", vocala;

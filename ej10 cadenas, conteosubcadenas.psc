@@ -14,8 +14,7 @@ Proceso ejercicio10
 
 	para i<- 0 hasta longitud(frase) con paso 1 hacer
 		letra <- subcadena(frase, i, i);
-		si Subcadena(letra, i,i) = Subcadena(frase,i,i) Entonces
-		FinSi
+		
 	FinPara
 	
 	

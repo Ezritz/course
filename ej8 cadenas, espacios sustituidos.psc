@@ -14,15 +14,17 @@ Proceso ejercicio8
 	para i <- 0 hasta longitud(frase) con paso 1 Hacer
 		letra <- subcadena(frase, i,i);
 		
-		si subcadena(frase,i ,i) <> ' ' Entonces
+		si letra <> ' ' Entonces
 			frase2<- concatenar(frase2, letra);
 		SiNo
-			escribir sin saltar concatenar(frase2, '*');
+			frase2 <- concatenar(frase2, '*');
 			
 		FinSi
-		
+		escribir frase2;
 		
 		
 	FinPara
+	
+	escribir frase2;
 	escribir "";
 FinProceso
